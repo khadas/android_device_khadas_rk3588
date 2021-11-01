@@ -32,7 +32,7 @@ SF_PRIMARY_DISPLAY_ORIENTATION := 0
 # Disable emulator for "make dist" until there is a 64-bit qemu kernel
 BUILD_EMULATOR := false
 TARGET_BOARD_PLATFORM := rk3588
-TARGET_BOARD_PLATFORM_GPU := mali-G52
+TARGET_BOARD_PLATFORM_GPU := mali-G610
 TARGET_RK_GRALLOC_VERSION := 4
 BOARD_USE_DRM := true
 
