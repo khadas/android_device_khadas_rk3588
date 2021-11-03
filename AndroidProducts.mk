@@ -15,8 +15,11 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/rk3588_s/rk3588_s.mk
+    $(LOCAL_DIR)/rk3588_s/rk3588_s.mk \
+    $(LOCAL_DIR)/rk3588_s/rk3588s_s.mk
 
 COMMON_LUNCH_CHOICES := \
     rk3588_s-userdebug \
-    rk3588_s-user
+    rk3588_s-user \
+    rk3588s_s-userdebug \
+    rk3588s_s-user
