@@ -24,8 +24,8 @@ PRODUCT_KERNEL_CONFIG ?= rockchip_defconfig
 
 #BOARD_AVB_ENABLE := true
 # used for fstab_generator, sdmmc controller address
-PRODUCT_BOOT_DEVICE := fe2e0000.sdhci
-PRODUCT_SDMMC_DEVICE := fe2c0000.dwmmc
+PRODUCT_BOOT_DEVICE := fe2e0000.mmc
+PRODUCT_SDMMC_DEVICE := fe2c0000.mmc
 
 SF_PRIMARY_DISPLAY_ORIENTATION := 0
 
