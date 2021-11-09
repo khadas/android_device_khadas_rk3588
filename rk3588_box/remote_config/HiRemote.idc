@@ -1,5 +1,4 @@
-#
-# Copyright 2014 The Android Open-Source Project
+# Copyright (C) 2015 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,17 +11,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/rk3588_s/rk3588_s.mk \
-    $(LOCAL_DIR)/rk3588_s/rk3588s_s.mk \
-    $(LOCAL_DIR)/rk3588_box/rk3588_box.mk
-
-COMMON_LUNCH_CHOICES := \
-    rk3588_s-userdebug \
-    rk3588_s-user \
-    rk3588s_s-userdebug \
-    rk3588s_s-user \
-    rk3588_box-userdebug \
-    rk3588_box-user
+device.internal = 0
+audio.mic = 1
