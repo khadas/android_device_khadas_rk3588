@@ -20,6 +20,11 @@ BUILD_WITH_GO_OPT := false
 BOARD_USES_AB_IMAGE := false
 BOARD_ROCKCHIP_VIRTUAL_AB_ENABLE := false
 
+BOARD_GRAVITY_SENSOR_SUPPORT := true
+BOARD_GYROSCOPE_SENSOR_SUPPORT := true
+BOARD_PROXIMITY_SENSOR_SUPPORT := true
+BOARD_LIGHT_SENSOR_SUPPORT := true
+
 ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
     include device/rockchip/common/BoardConfig_AB.mk
     TARGET_RECOVERY_FSTAB := device/rockchip/rk3588/rk3588s_s/recovery.fstab_AB
