@@ -44,7 +44,6 @@ PRODUCT_AAPT_PREF_CONFIG := tvdpi
 #
 ## add Rockchip properties
 #
-PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=213
 PRODUCT_PROPERTY_OVERRIDES += ro.wifi.sleep.power.down=true
 PRODUCT_PROPERTY_OVERRIDES += persist.wifi.sleep.delay.ms=0
 PRODUCT_PROPERTY_OVERRIDES += persist.bt.power.down=true
@@ -137,9 +136,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.rk_sdk=1 \
     persist.sys.show_color_option=false \
     ro.audio.monitorOrientation=true \
-    persist.vendor.rk_vulkan=true \
     ro.vendor.nrdp.modelgroup=NEXUSPLAYERFUGU \
-    vendor.hwc.device.primary=HDMI-A,TV \
-    persist.vendor.framebuffer.main=1920x1080@60 \
+    vendor.hwc.device.primary=HDMI-A,TV
 
+
+TARGET_BOARD_SUPPORT_8K_OUTPUT := false
+ifeq ($(TARGET_BOARD_SUPPORT_8K_OUTPUT),true)
+PRODUCT_PROPERTY_OVERRIDES += persist.vendor.framebuffer.main=3840x2160@60
+PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=480
+else
+PRODUCT_PROPERTY_OVERRIDES += persist.vendor.framebuffer.main=1920x1080@60
+PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=213
+endif
 
