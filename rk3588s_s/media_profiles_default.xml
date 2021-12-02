@@ -184,7 +184,7 @@
 
         <EncoderProfile quality="4kdci" fileFormat="mp4" duration="30">
             <Video codec="h264"
-                   bitRate="6000000"
+                   bitRate="30000000"
                    width="4096"
                    height="3072"
                    frameRate="30" />
@@ -351,7 +351,7 @@
 
         <EncoderProfile quality="timelapse4kdci" fileFormat="mp4" duration="30">
             <Video codec="h264"
-                   bitRate="3000000"
+                   bitRate="30000000"
                    width="4096"
                    height="3072"
                    frameRate="30" />
@@ -463,7 +463,7 @@
 
         <EncoderProfile quality="4kdci" fileFormat="mp4" duration="30">
             <Video codec="h264"
-                   bitRate="6000000"
+                   bitRate="30000000"
                    width="4224"
                    height="3136"
                    frameRate="30" />
@@ -598,7 +598,7 @@
 
         <EncoderProfile quality="timelapse4kdci" fileFormat="mp4" duration="30">
             <Video codec="h264"
-                   bitRate="6000000"
+                   bitRate="30000000"
                    width="4224"
                    height="3136"
                    frameRate="30" />
@@ -625,7 +625,7 @@
          or query the capabilities of the codec at all if it is disabled
     -->
     <VideoEncoderCap name="h264" enabled="true"
-        minBitRate="64000" maxBitRate="3000000"
+        minBitRate="64000" maxBitRate="64000000"
         minFrameWidth="176" maxFrameWidth="7680"
         minFrameHeight="144" maxFrameHeight="4320"
         minFrameRate="1" maxFrameRate="30" />
