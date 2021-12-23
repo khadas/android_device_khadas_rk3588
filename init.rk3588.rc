@@ -3,6 +3,10 @@ on property:sys.boot_completed=1
     chown system system /sys/class/devfreq/fb000000.gpu/min_freq
     chown system system /sys/class/devfreq/fb000000.gpu/max_freq
 
+    chmod 0664 /sys/class/devfreq/fb000000.gpu/governor
+    chown 0664 /sys/class/devfreq/fb000000.gpu/min_freq
+    chown 0664 /sys/class/devfreq/fb000000.gpu/max_freq
+
     write /sys/devices/system/cpu/cpufreq/policy0/interactive/target_loads 65
     write /sys/devices/system/cpu/cpufreq/policy4/interactive/target_loads 65
     write /sys/devices/system/cpu/cpufreq/policy6/interactive/target_loads 65
@@ -16,7 +20,6 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor schedutil
 
     write /sys/class/devfreq/dmc/governor dmc_ondemand
-    
 
 on boot
     chown system system /sys/class/thermal/thermal_zone0/policy
