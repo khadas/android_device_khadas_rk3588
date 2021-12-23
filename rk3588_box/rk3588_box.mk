@@ -54,7 +54,7 @@ PRODUCT_PACKAGES += \
     android.hardware.tv.input@1.0-impl
 
 # Display
-#TARGET_BASE_PARAMETER_IMAGE := device/rockchip/rk3588/rk3588_box/etc/baseparameter_auto.img
+TARGET_BASE_PARAMETER_IMAGE := device/rockchip/rk3588/rk3588_box/etc/baseparameter_auto.img
 
 # Disable bluetooth because of continuous driver crashes
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += config.disable_bluetooth=true
@@ -98,12 +98,8 @@ PRODUCT_COPY_FILES += \
 
 BOARD_HS_ETHERNET := true
 
-TARGET_BOARD_CONCISE_RESOLUTION := false
-# remove some resolution which are not commonly used
-ifeq ($(TARGET_BOARD_CONCISE_RESOLUTION),true)
-PRODUCT_COPY_FILES += \
-    device/rockchip/rk3588/rk3588_box/etc/resolution_white.xml:/system/usr/share/resolution_white.xml
-endif
+# use box external_camera_config.xml
+PRODUCT_USB_CAMERA_CONFIG := $(LOCAL_PATH)/etc/external_camera_config.xml
 
 # default enalbe mipi camera for box, noeed disable please
 TARGET_BOARD_USE_MIPI_CAMEAR := false
