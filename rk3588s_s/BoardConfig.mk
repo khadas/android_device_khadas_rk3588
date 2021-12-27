@@ -30,7 +30,6 @@ ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
     TARGET_RECOVERY_FSTAB := device/rockchip/rk3588/rk3588s_s/recovery.fstab_AB
 endif
 
-PRODUCT_UBOOT_CONFIG := rk35PRODUCT_KERNEL_DTS := rk3588s-evb1-ddr4-v10
-PRODUCT_KERNEL_DTS := rk3588s-evb1-lp4x-v10
+PRODUCT_KERNEL_DTS := rk3588s-tablet-v10
 BOARD_CAMERA_SUPPORT_EXT := true
 BOARD_HS_ETHERNET := true
