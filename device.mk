@@ -18,7 +18,8 @@ PRODUCT_PACKAGES += \
     librknn_api_android \
     librknnhal_bridge.rockchip \
     rockchip.hardware.neuralnetworks@1.0-impl \
-    rockchip.hardware.neuralnetworks@1.0-service
+    rockchip.hardware.neuralnetworks@1.0-service \
+    rknn_server
 
 #$(call inherit-product-if-exists, vendor/rockchip/common/npu/npu.mk)
 
