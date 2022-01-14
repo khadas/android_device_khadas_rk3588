@@ -12,7 +12,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.use_partial_updates=false
 
-#BOARD_SEPOLICY_DIRS += vendor/rockchip/hardware/interfaces/neuralnetworks/1.0/default/sepolicy
+BOARD_SEPOLICY_DIRS += vendor/rockchip/hardware/interfaces/neuralnetworks/1.0/default/sepolicy
 PRODUCT_PACKAGES += \
     public.libraries-rockchip \
     librknn_api_android \
