@@ -106,22 +106,14 @@ TARGET_BOARD_USE_MIPI_CAMEAR := false
 
 # for box mipi camera
 ifeq ($(TARGET_BOARD_USE_MIPI_CAMEAR),true)
-
-#add for camera aiq2.0
-#
-PRODUCT_PACKAGES += \
-    rkaiq_tool_server \
-    rkaiq_3A_server
-
 CAMERA_ETC_PATH := $(TOP)/hardware/rockchip/camera/etc
 IQ_FILES_PATH := $(TOP)/external/camera_engine_rkaiq/iqfiles
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/etc/camera/hardware/rockchip/camera/etc/camera/camera3_profiles_rk3588.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera3_profiles.xml \
-	external/camera_engine_rkaiq/rkisp2x_tuner/reset_camera.sh:$(TARGET_COPY_OUT_VENDOR)/etc/camera/reset_camera.sh \
+    $(CAMERA_ETC_PATH)/camera/camera3_profiles_$(TARGET_BOARD_PLATFORM).xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera3_profiles.xml \
     $(call find-copy-subdir-files,*,$(CAMERA_ETC_PATH)/firmware,$(TARGET_COPY_OUT_VENDOR)/firmware) \
     $(call find-copy-subdir-files,*,$(CAMERA_ETC_PATH)/camera,$(TARGET_COPY_OUT_VENDOR)/etc/camera) \
-    $(call find-copy-subdir-files,*,$(IQ_FILES_PATH)/,$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/etc/camera/external/camera_engine_rkaiq/iqfiles,$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/)
+    $(call find-copy-subdir-files,*,$(IQ_FILES_PATH)/isp21/,$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/) \
+    $(call find-copy-subdir-files,*,$(IQ_FILES_PATH)/isp3x/,$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/)
 endif
 
 
@@ -136,8 +128,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.hwc.device.primary=HDMI-A,TV
 
 
-TARGET_BOARD_SUPPORT_8K_OUTPUT := false
-ifeq ($(TARGET_BOARD_SUPPORT_8K_OUTPUT),true)
+TARGET_BOARD_SUPPORT_4K_UI := false
+ifeq ($(TARGET_BOARD_SUPPORT_4K_UI),true)
 PRODUCT_PROPERTY_OVERRIDES += persist.vendor.framebuffer.main=3840x2160@60
 PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=480
 else
