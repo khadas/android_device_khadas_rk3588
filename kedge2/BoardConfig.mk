@@ -29,7 +29,7 @@ BOARD_LIGHT_SENSOR_SUPPORT := true
 
 ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
     include device/khadas/common/BoardConfig_AB.mk
-    TARGET_RECOVERY_FSTAB := device/khadas/rk3588/rk3588_s/recovery.fstab_AB
+    TARGET_RECOVERY_FSTAB := device/khadas/rk3588/kedge2/recovery.fstab_AB
 endif
 
 PRODUCT_UBOOT_CONFIG := kedge2

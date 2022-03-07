@@ -19,7 +19,7 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 PRODUCT_DTBO_TEMPLATE := $(LOCAL_PATH)/dt-overlay.in
 
 include device/khadas/common/build/rockchip/DynamicPartitions.mk
-include device/khadas/rk3588/rk3588_s/BoardConfig.mk
+include device/khadas/rk3588/kedge2/BoardConfig.mk
 include device/khadas/common/BoardConfig.mk
 $(call inherit-product, device/khadas/rk3588/device.mk)
 $(call inherit-product, device/khadas/common/device.mk)
@@ -29,8 +29,8 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/../overlay
 
 PRODUCT_CHARACTERISTICS := tablet
 
-PRODUCT_NAME := rk3588_s
-PRODUCT_DEVICE := rk3588_s
+PRODUCT_NAME := kedge2
+PRODUCT_DEVICE := kedge2
 PRODUCT_BRAND := rockchip
 PRODUCT_MODEL := rk3588_s
 PRODUCT_MANUFACTURER := Khadas
