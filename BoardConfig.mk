@@ -20,7 +20,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a76
 
 PRODUCT_UBOOT_CONFIG ?= kedge2
 PRODUCT_KERNEL_ARCH ?= arm64
-PRODUCT_KERNEL_DTS ?= kedge2
+PRODUCT_KERNEL_DTS ?= rk3588s-khadas-edge2
 PRODUCT_KERNEL_CONFIG ?= kedge2_defconfig pcie_wifi.config
 
 #BOARD_AVB_ENABLE := true
