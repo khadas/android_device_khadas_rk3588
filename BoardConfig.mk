@@ -18,10 +18,10 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a76
 
-PRODUCT_UBOOT_CONFIG ?= rk3588
+PRODUCT_UBOOT_CONFIG ?= kedge2
 PRODUCT_KERNEL_ARCH ?= arm64
-PRODUCT_KERNEL_DTS ?= rk3588-evb1-lp4-v10
-PRODUCT_KERNEL_CONFIG ?= rockchip_defconfig pcie_wifi.config
+PRODUCT_KERNEL_DTS ?= kedge2
+PRODUCT_KERNEL_CONFIG ?= kedge2_defconfig pcie_wifi.config
 
 #BOARD_AVB_ENABLE := true
 # used for fstab_generator, sdmmc controller address

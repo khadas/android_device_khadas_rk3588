@@ -33,7 +33,7 @@ PRODUCT_NAME := rk3588_s
 PRODUCT_DEVICE := rk3588_s
 PRODUCT_BRAND := rockchip
 PRODUCT_MODEL := rk3588_s
-PRODUCT_MANUFACTURER := rockchip
+PRODUCT_MANUFACTURER := Khadas
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 #
 ## add Rockchip properties
@@ -44,3 +44,7 @@ PRODUCT_PROPERTY_OVERRIDES += persist.wifi.sleep.delay.ms=0
 PRODUCT_PROPERTY_OVERRIDES += persist.bt.power.down=true
 PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.primary=DSI
 PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.extend=HDMI-A,eDP
+
+PRODUCT_PROPERTY_OVERRIDES += service.adb.tcp.port=5555
+BUILD_NUMBER2 := $(shell $(DATE) +%Y%m%d)
+PRODUCT_PROPERTY_OVERRIDES += ro.build.display.id=Edge2_Android12_$(BUILD_NUMBER2)
