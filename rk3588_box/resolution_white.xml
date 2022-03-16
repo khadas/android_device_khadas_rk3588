@@ -96,7 +96,55 @@
 		<flags>5</flags>
 		<vic>6</vic>
 	</resolution>
-	<resolution> <!-- 3840x2160P60 -->
+	<resolution> <!-- DP1 3840x2160P60 -->
+		<clock>533250</clock>
+		<hdisplay>3840</hdisplay>
+		<hsync_start>3888</hsync_start>
+		<hsync_end>3920</hsync_end>
+		<htotal>4000</htotal>
+		<hskew>0</hskew>
+		<vdisplay>2160</vdisplay>
+		<vsync_start>2163</vsync_start>
+		<vsync_end>2168</vsync_end>
+		<vtotal>2222</vtotal>
+		<vscan>0</vscan>
+		<vrefresh>60</vrefresh>
+		<flags>9</flags>
+		<vic>7</vic>
+	</resolution>
+	<resolution> <!-- DP2 3840x2160P60 -->
+		<clock>533250</clock>
+		<hdisplay>3840</hdisplay>
+		<hsync_start>3888</hsync_start>
+		<hsync_end>3952</hsync_end>
+		<htotal>4000</htotal>
+		<hskew>0</hskew>
+		<vdisplay>2160</vdisplay>
+		<vsync_start>2163</vsync_start>
+		<vsync_end>2168</vsync_end>
+		<vtotal>2222</vtotal>
+		<vscan>0</vscan>
+		<vrefresh>60</vrefresh>
+		<flags>9</flags>
+		<vic>8</vic>
+	</resolution>
+	<resolution> <!-- DP3 3840x2160P60 -->
+		<clock>262750</clock>
+		<hdisplay>3840</hdisplay>
+		<hsync_start>3888</hsync_start>
+		<hsync_end>3920</hsync_end>
+		<htotal>4000</htotal>
+		<hskew>0</hskew>
+		<vdisplay>2160</vdisplay>
+		<vsync_start>2163</vsync_start>
+		<vsync_end>2168</vsync_end>
+		<vtotal>2191</vtotal>
+		<vscan>0</vscan>
+		<vrefresh>30</vrefresh>
+		<flags>9</flags>
+		<vic>9</vic>
+	</resolution>
+	<resolution> <!-- HDMI 3840x2160P60 -->
 		<clock>594000</clock>
 		<hdisplay>3840</hdisplay>
 		<hsync_start>4016</hsync_start>
@@ -110,7 +158,7 @@
 		<vscan>0</vscan>
 		<vrefresh>60</vrefresh>
 		<flags>5</flags>
-		<vic>7</vic>
+		<vic>10</vic>
 	</resolution>
 	<resolution> <!-- 3840x2160P120 -->
 		<clock>1188000</clock>
@@ -126,7 +174,7 @@
 		<vscan>0</vscan>
 		<vrefresh>120</vrefresh>
 		<flags>5</flags>
-		<vic>8</vic>
+		<vic>11</vic>
 	</resolution>
 	<resolution> <!-- 7680x4320P30 -->
 		<clock>1188000</clock>
@@ -142,7 +190,7 @@
 		<vscan>0</vscan>
 		<vrefresh>30</vrefresh>
 		<flags>5</flags>
-		<vic>9</vic>
+		<vic>12</vic>
 	</resolution>
 	<resolution> <!-- 7680x4320P50 -->
 		<clock>2376000</clock>
@@ -158,7 +206,7 @@
 		<vscan>0</vscan>
 		<vrefresh>50</vrefresh>
 		<flags>5</flags>
-		<vic>10</vic>
+		<vic>13</vic>
 	</resolution>
 	<resolution> <!-- 7680x4320P60 -->
 		<clock>2376000</clock>
@@ -174,6 +222,6 @@
 		<vscan>0</vscan>
 		<vrefresh>60</vrefresh>
 		<flags>5</flags>
-		<vic>11</vic>
+		<vic>14</vic>
 	</resolution>
 </resolutions>
