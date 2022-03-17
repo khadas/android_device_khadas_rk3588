@@ -98,6 +98,8 @@ PRODUCT_COPY_FILES += \
 
 BOARD_HS_ETHERNET := true
 
+BOARD_USES_LIBSVEP := false
+
 # use box external_camera_config.xml
 PRODUCT_USB_CAMERA_CONFIG := $(LOCAL_PATH)/etc/external_camera_config.xml
 
