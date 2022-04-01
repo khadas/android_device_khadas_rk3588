@@ -22,6 +22,7 @@ include device/rockchip/rk3588/rk3588_xr/BoardConfig.mk
 include device/rockchip/common/BoardConfig.mk
 $(call inherit-product, device/rockchip/rk3588/device.mk)
 $(call inherit-product, device/rockchip/common/device.mk)
+$(call inherit-product, device/rockchip/common/modules/openxr.mk)
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/../overlay

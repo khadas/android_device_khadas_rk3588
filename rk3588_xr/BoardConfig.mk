@@ -39,6 +39,7 @@ BOARD_CAMERA_SUPPORT_EXT := true
 BOARD_HS_ETHERNET := true
 BOARD_ROCKCHIP_THERMAL := true
 USE_PRODUCT_RESOLUTION_WHITE := false
+BOARD_OPENXR_RUNTIME := true
 
 PRODUCT_COPY_FILES += \
     frameworks/native/services/vr/virtual_touchpad/idc/vr-virtual-touchpad-1.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/vr-virtual-touchpad-1.idc \
