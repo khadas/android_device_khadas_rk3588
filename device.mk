@@ -99,4 +99,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
                 ro.kernel.android.checkjni=0 \
                 ro.build.shutdown_timeout=6 \
                 persist.enable_task_snapshots=false \
+                persist.sys.hdmi.cec_enable=true \
                 ro.vendor.frameratelock=true
