@@ -75,6 +75,8 @@ on init
 
     chown system system /sys/class/devfreq/dmc/system_status
     chmod 0666 /sys/class/devfreq/dmc/system_status
+    chown root system /dev/cec0
+    chmod 0664 /dev/cec0
 
 on early-init
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor performance
