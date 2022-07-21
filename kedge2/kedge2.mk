@@ -34,7 +34,7 @@ PRODUCT_DEVICE := kedge2
 PRODUCT_BRAND := rockchip
 PRODUCT_MODEL := Edge2
 PRODUCT_MANUFACTURER := Khadas
-PRODUCT_AAPT_PREF_CONFIG := mdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 $(shell python device/khadas/rk3588/auto_generator.py preinstall)
 -include device/khadas/rk3588/preinstall/preinstall.mk
@@ -48,6 +48,7 @@ PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=240
 PRODUCT_PROPERTY_OVERRIDES += ro.wifi.sleep.power.down=true
 PRODUCT_PROPERTY_OVERRIDES += persist.wifi.sleep.delay.ms=0
 PRODUCT_PROPERTY_OVERRIDES += persist.bt.power.down=true
+PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.compose_policy=1
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.rotation.efull=true
 
 PRODUCT_PROPERTY_OVERRIDES += service.adb.tcp.port=5555
