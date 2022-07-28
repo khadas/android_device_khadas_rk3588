@@ -21,6 +21,8 @@ on property:sys.boot_completed=1
 
     write /sys/class/devfreq/dmc/governor dmc_ondemand
 
+    write /dev/vehicle 88
+
 on charger
     chown system system /sys/class/devfreq/fb000000.gpu/governor
     chown system system /sys/class/devfreq/fb000000.gpu/min_freq
