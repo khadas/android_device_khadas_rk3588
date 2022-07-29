@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+TARGET_BOARD_PLATFORM_PRODUCT := vehicle
+
 # First lunching is S, api_level is 31
 PRODUCT_SHIPPING_API_LEVEL := 31
 PRODUCT_DTBO_TEMPLATE := $(LOCAL_PATH)/dt-overlay.in
@@ -26,8 +28,9 @@ $(call inherit-product, device/rockchip/common/device.mk)
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/../overlay
+PRODUCT_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-PRODUCT_CHARACTERISTICS := tablet
+PRODUCT_CHARACTERISTICS := vehicle
 
 PRODUCT_NAME := rk3588m_s
 PRODUCT_DEVICE := rk3588m_s
