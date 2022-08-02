@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-include device/rockchip/rk3588/BoardConfig.mk
+include device/khadas/rk3588/BoardConfig.mk
 BUILD_WITH_GO_OPT := false
 
 # AB image definition
@@ -28,8 +28,8 @@ BOARD_PROXIMITY_SENSOR_SUPPORT := true
 BOARD_LIGHT_SENSOR_SUPPORT := true
 
 ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
-    include device/rockchip/common/BoardConfig_AB.mk
-    TARGET_RECOVERY_FSTAB := device/rockchip/rk3588/rk3588_t/recovery.fstab_AB
+    include device/khadas/common/BoardConfig_AB.mk
+    TARGET_RECOVERY_FSTAB := device/khadas/rk3588/rk3588_t/recovery.fstab_AB
 endif
 
 PRODUCT_UBOOT_CONFIG := rk3588
