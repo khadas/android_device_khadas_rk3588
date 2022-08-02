@@ -15,14 +15,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/kedge2/kedge2.mk \
-    $(LOCAL_DIR)/rk3588_box/rk3588_box.mk \
-    $(LOCAL_DIR)/rk3588_xr/rk3588_xr.mk \
+    $(LOCAL_DIR)/kedge2/kedge2.mk
 
 COMMON_LUNCH_CHOICES := \
     kedge2-userdebug \
-    kedge2-user \
-    rk3588_box-userdebug \
-    rk3588_box-user \
-    rk3588_xr-userdebug \
-    rk3588_xr-user
+    kedge2-user
