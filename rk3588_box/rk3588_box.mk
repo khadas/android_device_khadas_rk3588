@@ -19,19 +19,19 @@ TARGET_BOARD_PLATFORM_PRODUCT := box
 PRODUCT_SHIPPING_API_LEVEL := 31
 PRODUCT_DTBO_TEMPLATE := $(LOCAL_PATH)/dt-overlay.in
 
-include device/rockchip/common/build/rockchip/DynamicPartitions.mk
-include device/rockchip/rk3588/rk3588_box/BoardConfig.mk
-include device/rockchip/common/BoardConfig.mk
-$(call inherit-product, device/rockchip/rk3588/device.mk)
-$(call inherit-product, device/rockchip/common/device.mk)
+include device/khadas/common/build/rockchip/DynamicPartitions.mk
+include device/khadas/rk3588/rk3588_box/BoardConfig.mk
+include device/khadas/common/BoardConfig.mk
+$(call inherit-product, device/khadas/rk3588/device.mk)
+$(call inherit-product, device/khadas/common/device.mk)
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
 
-PRODUCT_PACKAGE_OVERLAYS += device/rockchip/rk3588/rk3588_box/overlay
+PRODUCT_PACKAGE_OVERLAYS += device/khadas/rk3588/rk3588_box/overlay
 
 #DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/../overlay
-DEVICE_MANIFEST_FILE := device/rockchip/rk3588/rk3588_box/manifest.xml
+DEVICE_MANIFEST_FILE := device/khadas/rk3588/rk3588_box/manifest.xml
 
-PRODUCT_FSTAB_TEMPLATE := device/rockchip/rk3588/rk3588_box/fstab_box.in
+PRODUCT_FSTAB_TEMPLATE := device/khadas/rk3588/rk3588_box/fstab_box.in
 
 PRODUCT_CHARACTERISTICS := tv
 
@@ -54,7 +54,7 @@ PRODUCT_PACKAGES += \
     android.hardware.tv.input@1.0-impl
 
 # Display
-TARGET_BASE_PARAMETER_IMAGE := device/rockchip/rk3588/rk3588_box/etc/baseparameter_auto.img
+TARGET_BASE_PARAMETER_IMAGE := device/khadas/rk3588/rk3588_box/etc/baseparameter_auto.img
 
 # Disable bluetooth because of continuous driver crashes
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += config.disable_bluetooth=true
@@ -85,9 +85,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=android-rockchip-tv
 
 # copy input keylayout and device config
-keylayout_files := $(shell ls device/rockchip/rk3588/rk3588_box/remote_config )
+keylayout_files := $(shell ls device/khadas/rk3588/rk3588_box/remote_config )
 PRODUCT_COPY_FILES += \
-        $(foreach file, $(keylayout_files), device/rockchip/rk3588/rk3588_box/remote_config/$(file):$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/$(file))
+        $(foreach file, $(keylayout_files), device/khadas/rk3588/rk3588_box/remote_config/$(file):$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/$(file))
 
 # Vendor seccomp policy files for media components:
 PRODUCT_COPY_FILES += \

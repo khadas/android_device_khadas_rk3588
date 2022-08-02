@@ -23,7 +23,7 @@ PRODUCT_PACKAGES += \
 
 #$(call inherit-product-if-exists, vendor/rockchip/common/npu/npu.mk)
 
-#BOARD_SEPOLICY_DIRS += device/rockchip/rk3588/sepolicy_vendor
+#BOARD_SEPOLICY_DIRS += device/khadas/rk3588/sepolicy_vendor
 # enable this for support f2fs with data partion
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 
