@@ -32,7 +32,7 @@ PRODUCT_CHARACTERISTICS := tablet
 PRODUCT_NAME := kedge2
 PRODUCT_DEVICE := kedge2
 PRODUCT_BRAND := rockchip
-PRODUCT_MODEL := rk3588_s
+PRODUCT_MODEL := Edge2
 PRODUCT_MANUFACTURER := Khadas
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 #
@@ -50,4 +50,4 @@ PRODUCT_PROPERTY_OVERRIDES += persist.sys.rotation.einit-2=3
 
 PRODUCT_PROPERTY_OVERRIDES += service.adb.tcp.port=5555
 BUILD_NUMBER2 := $(shell $(DATE) +%Y%m%d)
-PRODUCT_PROPERTY_OVERRIDES += ro.build.display.id=Edge2_Android12_$(BUILD_NUMBER2)
+PRODUCT_PROPERTY_OVERRIDES += ro.build.display.id=Edge2-android-12-v$(BUILD_NUMBER2)
