@@ -83,3 +83,12 @@ on early-init
     write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor performance
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor performance
     write /sys/class/devfreq/dmc/governor performance
+
+service preinstall /system/bin/preinstall.sh
+    user root
+    group root
+    oneshot
+    seclabel u:r:preinstall:s0
+
+on property:sys.boot_completed=1
+    start preinstall
