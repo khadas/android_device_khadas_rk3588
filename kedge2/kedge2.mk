@@ -42,12 +42,7 @@ PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=240
 PRODUCT_PROPERTY_OVERRIDES += ro.wifi.sleep.power.down=true
 PRODUCT_PROPERTY_OVERRIDES += persist.wifi.sleep.delay.ms=0
 PRODUCT_PROPERTY_OVERRIDES += persist.bt.power.down=true
-PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.primary=HDMI-A,DP
-PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.extend=DSI
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.rotation.efull=true
-PRODUCT_PROPERTY_OVERRIDES += persist.sys.rotation.einit-1=3
-PRODUCT_PROPERTY_OVERRIDES += persist.sys.rotation.einit-2=3
-PRODUCT_PROPERTY_OVERRIDES += persist.vendor.framebuffer.main=1920x1080@60
 
 PRODUCT_PROPERTY_OVERRIDES += service.adb.tcp.port=5555
 BUILD_NUMBER2 := $(shell $(DATE) +%Y%m%d)
