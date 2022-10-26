@@ -78,6 +78,7 @@ on init
     chown root system /dev/cec0
     chmod 0664 /dev/cec0
     chmod 666 /sys/class/rtc/rtc0/bootalarm
+	chmod 666 /sys/class/mcu/mculed
 
 on early-init
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor performance
