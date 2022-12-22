@@ -43,6 +43,7 @@ PRODUCT_PROPERTY_OVERRIDES += ro.wifi.sleep.power.down=true
 PRODUCT_PROPERTY_OVERRIDES += persist.wifi.sleep.delay.ms=0
 PRODUCT_PROPERTY_OVERRIDES += persist.bt.power.down=true
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.rotation.efull=true
+PRODUCT_PROPERTY_OVERRIDES += ro.config.media_vol_default=12
 
 PRODUCT_PROPERTY_OVERRIDES += service.adb.tcp.port=5555
 BUILD_NUMBER2 := $(shell $(DATE) +%Y%m%d)
