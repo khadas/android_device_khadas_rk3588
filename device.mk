@@ -101,3 +101,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
                 persist.enable_task_snapshots=false \
                 persist.sys.hdmi.cec_enable=true \
                 ro.vendor.frameratelock=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+       ro.factory.storage_suppexfat=true
+
+PRODUCT_PACKAGES += \
+       fsck.exfat \
+       mkfs.exfat \
+       tune.exfat \
+       dump.exfat
