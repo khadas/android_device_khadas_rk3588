@@ -13,27 +13,27 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# First lunching is S, api_level is 31
-PRODUCT_SHIPPING_API_LEVEL := 31
+
+# First lunching is T, api_level is 33
+PRODUCT_SHIPPING_API_LEVEL := 33
 PRODUCT_DTBO_TEMPLATE := $(LOCAL_PATH)/dt-overlay.in
 
 include device/rockchip/common/build/rockchip/DynamicPartitions.mk
-include device/rockchip/rk3588/rk3588_xr/BoardConfig.mk
+include device/rockchip/rk3588/kedge2/BoardConfig.mk
 include device/rockchip/common/BoardConfig.mk
 $(call inherit-product, device/rockchip/rk3588/device.mk)
 $(call inherit-product, device/rockchip/common/device.mk)
-$(call inherit-product, device/rockchip/common/modules/openxr.mk)
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/../overlay
 
-PRODUCT_CHARACTERISTICS := xr
+PRODUCT_CHARACTERISTICS := tablet
 
-PRODUCT_NAME := rk3588_xr
-PRODUCT_DEVICE := rk3588_xr
+PRODUCT_NAME := kedge2
+PRODUCT_DEVICE := kedge2
 PRODUCT_BRAND := rockchip
-PRODUCT_MODEL := rk3588_xr
-PRODUCT_MANUFACTURER := rockchip
+PRODUCT_MODEL := Edge2
+PRODUCT_MANUFACTURER := Khadas
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 #
 ## add Rockchip properties
@@ -43,7 +43,8 @@ PRODUCT_PROPERTY_OVERRIDES += ro.wifi.sleep.power.down=true
 PRODUCT_PROPERTY_OVERRIDES += persist.wifi.sleep.delay.ms=0
 PRODUCT_PROPERTY_OVERRIDES += persist.bt.power.down=true
 PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.primary=DSI
-PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.extend=DP,HDMI-A,eDP
-PRODUCT_PROPERTY_OVERRIDES += ro.vendor.power.boost_support=63
-PRODUCT_PROPERTY_OVERRIDES += ro.vendor.power.mode_support=32767
-BOARD_ROCKCHIP_THERMAL := true
+PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.extend=HDMI-A,eDP
+
+PRODUCT_PROPERTY_OVERRIDES += service.adb.tcp.port=5555
+BUILD_NUMBER2 := $(shell $(DATE) +%Y%m%d)
+PRODUCT_PROPERTY_OVERRIDES += ro.build.display.id=Edge2-android-13-v$(BUILD_NUMBER2)
