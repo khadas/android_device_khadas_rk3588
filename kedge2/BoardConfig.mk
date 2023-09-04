@@ -32,6 +32,7 @@ ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
     TARGET_RECOVERY_FSTAB := device/khadas/rk3588/kedge2/recovery.fstab_AB
 endif
 
+PRODUCT_KERNEL_CONFIG += pcie_wifi.config
 PRODUCT_UBOOT_CONFIG := kedge2
 PRODUCT_KERNEL_DTS := rk3588s-khadas-edge2
 BOARD_GSENSOR_MXC6655XA_SUPPORT := true
