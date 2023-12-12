@@ -35,6 +35,12 @@ PRODUCT_BRAND := rockchip
 PRODUCT_MODEL := Edge2
 PRODUCT_MANUFACTURER := Khadas
 PRODUCT_AAPT_PREF_CONFIG := mdpi
+
+$(shell python device/khadas/rk3588/auto_generator.py preinstall)
+-include device/khadas/rk3588/preinstall/preinstall.mk
+PRODUCT_COPY_FILES += \
+    device/khadas/rk3588/preinstall/preinstall.sh:system/bin/preinstall.sh
+
 #
 ## add Rockchip properties
 #
